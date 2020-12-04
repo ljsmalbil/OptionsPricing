@@ -22,6 +22,7 @@ float put_payoff (float strike_price, float stock_price) {
     /* put payoff is defined as: Ct = max(0, K - st), where
      * Ct denotes the payoff at time t, St the stock price
      * at maturity and K the strike price. */
+
     float default_value = 0;
 
     if (stock_price < strike_price) {
@@ -31,14 +32,16 @@ float put_payoff (float strike_price, float stock_price) {
     }
 }
 
-float call_put_strategy (float strike_price, float stock_price) {
+float call_put_strategy (float strike_price, float stock_price, float premium) {
     /* Call-put is a strategy whereby one buys but a put
-     * as well as a call option. The payoff is v-shaped. */
+     * as well as a call option. The payoff is v-shaped.
+     * N.B. The premium indicates the price that needs to be payed.
+     * */
     if (stock_price > strike_price) {
-        float c_payoff = call_payoff(strike_price, stock_price);
+        float c_payoff = call_payoff(strike_price, stock_price) - premium;
         return c_payoff;
     } else {
-        float p_payoff = put_payoff(strike_price, stock_price);
+        float p_payoff = put_payoff(strike_price, stock_price) - premium;
         return p_payoff;
     }
 }
