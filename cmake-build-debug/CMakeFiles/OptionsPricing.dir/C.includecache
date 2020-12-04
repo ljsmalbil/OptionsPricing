@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/louksmalbil/Desktop/FinanceProjects/OptionsPricing/main.c
+stdio.h
+-
+options.h
+/Users/louksmalbil/Desktop/FinanceProjects/OptionsPricing/options.h
+
+/Users/louksmalbil/Desktop/FinanceProjects/OptionsPricing/options.h
+
