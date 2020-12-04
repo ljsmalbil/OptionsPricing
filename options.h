@@ -10,10 +10,8 @@ int call_payoff (int strike_price, int stock_price) {
      * Ct denotes the payoff at time t, St the stock price
      * at maturity and K the strike price. */
     if (strike_price < stock_price) {
-        printf("%d", strike_price - stock_price);
-        return strike_price - stock_price;
+        return stock_price - strike_price;
     } else {
-        printf("%d", 0);
         return 0;
     }
 }
