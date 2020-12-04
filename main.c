@@ -5,11 +5,11 @@
 int main() {
 
     printf("Hello, World!\n");
-    int strike_price = 20;
-    int stock_price = 30;
+    float strike_price = 20;
+    float stock_price = 24;
 
-    int payoff = call_payoff(strike_price, stock_price);
-    printf("%d", payoff);
+    float payoff = call_payoff(strike_price, stock_price);
+    printf("%.3f", payoff);
     return 0;
 
 }
