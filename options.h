@@ -31,4 +31,16 @@ float put_payoff (float strike_price, float stock_price) {
     }
 }
 
+float call_put_strategy (float strike_price, float stock_price) {
+    /* Call-put is a strategy whereby one buys but a put
+     * as well as a call option. The payoff is v-shaped. */
+    if (stock_price > strike_price) {
+        float c_payoff = call_payoff(strike_price, stock_price);
+        return c_payoff;
+    } else {
+        float p_payoff = put_payoff(strike_price, stock_price);
+        return p_payoff;
+    }
+}
+
 #endif //OPTIONSPRICING_OPTIONS_H
