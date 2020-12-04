@@ -4,18 +4,16 @@
 
 int main() {
 
-    printf("Hello, World!\n");
     float strike_price = 20;
     float stock_price = 22;
 
     float c_payoff = call_payoff(strike_price, stock_price);
     printf("%.3f", c_payoff);
 
-    printf("\n");
+    printf("\nAddress: %p", c_payoff);
 
     float p_payoff = put_payoff(strike_price, stock_price);
-    printf("%.3f", p_payoff);
-
+    printf("\n%.3f", p_payoff);
 
     return 0;
 
